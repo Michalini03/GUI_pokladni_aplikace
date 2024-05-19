@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import ticketList from "./ticketList";
 import TicketList from "./ticketList";
+import FoodList from "./foodList";
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 
@@ -33,7 +34,7 @@ function App() {
               <div className="container">
                   <div className="menu">
                       <div className="menu-category">
-
+                        <FoodList />
                       </div>
                   </div>
                       <TicketList
