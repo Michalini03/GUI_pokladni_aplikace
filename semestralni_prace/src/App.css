@@ -1,16 +1,17 @@
 .App {
   text-align: center;
+  height: 100dvh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 100%;
 }
 
 body {
@@ -19,7 +20,19 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+}
+
+/* Navigace */
+.link-styles {
+  padding: 15px;
+  color: white;
+  font-family: "Trebuchet MS";
+  text-decoration: none;
+
+}
+
+.link-styles:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -27,6 +40,8 @@ body {
   flex: 1;
   overflow: hidden;
   width: 100%;
+  background-color: white;
+  height: 80%
 }
 
 .menu {
@@ -34,6 +49,7 @@ body {
   background-color: #f7f7f7;
   padding: 20px;
   overflow-y: auto;
+  height: 100%;
 }
 
 .ticket {
@@ -81,6 +97,7 @@ body {
   font-size: 14px;
 }
 
+/* Ticket */
 .ticket-header, .ticket-footer {
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
@@ -91,6 +108,7 @@ body {
 }
 
 .ticket-footer {
+  padding: 0;
   margin-top: auto;
   flex-shrink: 0;
   border-bottom: none;
@@ -100,6 +118,7 @@ body {
   flex: 1;
   overflow-y: auto;
   margin-top: 10px;
+
 }
 
 .ticket-item {
@@ -118,8 +137,8 @@ body {
   font-weight: bold;
 }
 
-
 .button {
+  width: 35%;
   background-color: #4caf50;
   color: white;
   padding: 10px;
@@ -139,7 +158,10 @@ body {
   padding: 10px;
   text-align: center;
   width: 100%;
-
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav ul {
@@ -147,29 +169,349 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
+  width: 100%;
   justify-content: space-around;
 }
 
 .nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  margin: 0;
-  width: 20%;
-  cursor: pointer;
   border: 2px solid gainsboro;
-  border-radius: 3%;
+  border-radius: 1%;
 }
 
-.nav button{
+.nav li {
+  margin: 0px 10px;
+}
+
+.nav li:hover {
+  background-color: #285208;
+}
+
+
+/* Souhrn */
+.body-souhrn {
+  background-color: white;
   width: 100%;
-  max-height: 100px;
-  min-height: 50px;
-  font-size: 80%;
-  background-color: #4caf50;
-  color: white;
-  border: 0;
+  color: black;
+  font-family: Arial, sans-serif;
 }
 
-.nav ul li button:hover {
-  text-decoration: underline;
-  background-color: #20a138;
+.container-souhrn {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header-souhrn {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.row-souhrn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h1-souhrn {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.p-souhrn {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.section-souhrn {
+  margin: 3px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+}
+
+/* Login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Light background for better contrast */
+}
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Light background for better contrast */
+}
+
+.login-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 300px;
+  background-color: #fff; /* Background for input container */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px; /* Padding inside the container */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+.login-icon {
+  margin-right: 10px; /* Space between icon and input */
+  color: #888; /* Optional: color for icons */
+}
+
+.login-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 320px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Pop-uP pro vytvoření položky */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-inner {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-heading {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.popup-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.popup-button {
+  width: 45%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-cancel {
+  background: #d9534f;
+  color: white;
+}
+
+.popup-add {
+  background: #5cb85c;
+  color: white;
+}
+
+/* Rezervace */
+.rezervace-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rezervace-header {
+  display: flex;
+  justify-content: center; /* Horizontální zarovnání na střed */
+  align-items: center; /* Vertikální zarovnání na střed */
+  padding: 10px;
+}
+
+.rezervace-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Horizontální zarovnání na střed */
+  align-items: center; /* Vertikální zarovnání na střed */
+  gap: 20px; /* Mezera mezi jednotlivými položkami formuláře */
+  padding: 20px; /* Odstup uvnitř kontejneru */
+  background-color: #f0f0f0; /* Světle šedé pozadí pro vizuální oddělení */
+  border-radius: 10px; /* Zaoblené rohy */
+  box-shadow: 3px 8px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
+  width: 80%;
+}
+
+.rezervace-form-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  color: #888888;
+}
+
+.rezervace-main-content {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.rezervace-table-container {
+  flex: 2;
+  padding: 20px;
+  overflow: auto;
+}
+
+.rezervace-calendar-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: black;
+}
+
+.rezervace-calendar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: black;
+}
+
+.rezervace-cancel-button {
+  width: 60%;
+  padding: 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5%;
+}
+
+/* potvrzující PopUp u Souhrnu */
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: green;
+  color: white;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+}
+
+/* Mincovka */
+.mincovka-container {
+  padding: 20px;
+  background-color: white; /* Bílé pozadí */
+  color: black; /* Černý text */
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lehký stín */
+  height: 810px;
+
+}
+
+.mincovka-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em; /* Zvýšení velikosti písma */
+}
+
+.mincovka-form {
+  display: flex;
+  flex-direction: column; /* Vertikální uspořádání */
+  gap: 10px; /* Mezery mezi prvky */
+}
+
+.mincovka-label {
+  font-family: "Calibri Light", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; /* Světle šedé pozadí */
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.2em; /* Zvýšení velikosti písma */
+  height: 30px;
+}
+
+.mincovka-input {
+  width: 20%;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc; /* Světle šedý okraj */
+  background-color: white; /* Bílé pozadí */
+  color: black; /* Černý text */
+  text-align: right;
+  font-size: 1em; /* Normální velikost písma */
+}
+
+.mincovka-total {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 2em; /* Zvýšení velikosti písma */
+  font-weight: bold; /* Tučné písmo */
 }
